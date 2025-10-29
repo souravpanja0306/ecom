@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import {
-    AiOutlineUser,
+    AiOutlineHome,
     AiOutlineShopping,
     AiOutlineHeart,
     AiOutlineSearch
@@ -9,38 +9,46 @@ import {
 
 const Profile = () => {
     return (
-        <>
-            <div className='grid grid-cols-2 gap-1'>
-                <Link
-                    to="/order"
-                    className='w-full p-2 border border-solid border-slate-500 shadow-md active:bg-red-300 font-semibold text-slate-500 rounded flex items-center justify-center text-xs gap-2'
+        <div className="text-slate-700 font-semibold p-4">
+            {/* Profile Card */}
+            <div className="flex flex-col items-center text-center border border-slate-200 shadow-md rounded-2xl p-4 bg-white">
+                <img
+                    src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png"
+                    alt="Profile"
+                    className="w-20 h-20 rounded-full border-2 border-slate-300 shadow-sm object-cover mb-3"
+                />
+                <h2 className="text-lg font-bold">Sourav Panja</h2>
+                <p className="text-sm text-slate-500">sourav.panja@raymon.in</p>
+            </div>
+
+            {/* Links Section */}
+            <div className="grid grid-cols-2 gap-2 mt-4">
+                <Link to="/order"
+                    className="flex items-center gap-2 p-3 border border-slate-200 rounded-xl shadow-sm hover:shadow-md hover:bg-slate-50 transition"
                 >
-                    <AiOutlineShopping className='text-xl' />
-                    My Order
+                    <AiOutlineShopping className="text-xl text-slate-600" />
+                    <span className="text-sm">My Orders</span>
                 </Link >
-                <Link
-                    to="/order-report"
-                    className='w-full p-2 border border-solid border-slate-500 shadow-md active:bg-red-300 font-semibold text-slate-500 rounded flex items-center justify-center text-xs gap-2'
+                <Link to="/order-report"
+                    className="flex items-center gap-2 p-3 border border-slate-200 rounded-xl shadow-sm hover:shadow-md hover:bg-slate-50 transition"
                 >
-                    <AiOutlineSearch className='text-xl' />
-                    Order Reports
+                    <AiOutlineSearch className="text-xl text-slate-600" />
+                    <span className="text-sm">Order Reports</span>
                 </Link >
-                <Link
-                    to="/wishlist"
-                    className='w-full p-2 border border-solid border-slate-500 shadow-md active:bg-red-300 font-semibold text-slate-500 rounded flex items-center justify-center text-xs gap-2'
+                <Link to="/wishlist"
+                    className="flex items-center gap-2 p-3 border border-slate-200 rounded-xl shadow-sm hover:shadow-md hover:bg-slate-50 transition"
                 >
-                    <AiOutlineHeart className='text-xl' />
-                    Wishlist
+                    <AiOutlineHeart className="text-xl text-slate-600" />
+                    <span className="text-sm">Wishlist</span>
                 </Link >
-                <Link
-                    to="/profile"
-                    className='w-full p-2 border border-solid border-slate-500 shadow-md active:bg-red-300 font-semibold text-slate-500 rounded flex items-center justify-center text-xs gap-2'
+                <Link to="/address"
+                    className="flex items-center gap-2 p-3 border border-slate-200 rounded-xl shadow-sm hover:shadow-md hover:bg-slate-50 transition"
                 >
-                    <AiOutlineUser className='text-xl' />
-                    My Addresses
+                    <AiOutlineHome className="text-xl text-slate-600" />
+                    <span className="text-sm">Address</span>
                 </Link >
             </div>
-        </>
+        </div>
     )
 }
 

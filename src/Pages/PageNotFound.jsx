@@ -4,12 +4,27 @@ import { AiOutlineHome } from "react-icons/ai";
 
 const PageNotFound = () => {
     return (
-        <div className='flex flex-col justify-center items-center min-h-screen'>
-            <h1 className='text-7xl text-red-600 font-bold'>404</h1>
-            <h1 className='text-sm text-slate-600'>Page not found</h1>
-            <Link to="/" className='py-4 underline text-blue-600 flex gap-1 justify-center items-center'>
-                <AiOutlineHome />
-                <span>Back to Home</span>
+        <div className="flex flex-col justify-center items-center min-h-screen bg-gradient-to-b from-slate-50 to-slate-100 text-center px-4">
+            {/* Big 404 */}
+            <h1 className="text-9xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-red-500 to-red-500 drop-shadow-lg">
+                404
+            </h1>
+
+            {/* Subtitle */}
+            <h2 className="text-2xl md:text-3xl font-semibold text-slate-700 mt-2">
+                Oops! Page not found
+            </h2>
+            <p className="text-slate-500 text-sm md:text-base mt-2 max-w-md">
+                The page you’re looking for doesn’t exist or has been moved.
+            </p>
+
+            {/* Back to Home Button */}
+            <Link
+                to="/"
+                className="bg-white mt-6 flex items-center gap-2 p-3 border border-slate-200 rounded-xl shadow-sm hover:shadow-md hover:bg-slate-50 transition"
+            >
+                <AiOutlineHome className="text-xl text-red-500" />
+                <span className="text-sm">Back to Home</span>
             </Link>
         </div>
     )
